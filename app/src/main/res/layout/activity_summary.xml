@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+                name="viewmodel"
+                type="com.avinash.activities.summary.SummaryViewModel" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/tv_summary"
+                android:textSize="30sp"
+                android:text="@string/summary"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:id="@+id/ll_questions"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_summary"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tv_name"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:text="@{`Hello `+viewmodel.observableModel.name}"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:text="Here are the answers selected:"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:textStyle="italic"
+                    android:text="Who is the best cricketer in the world?"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/tv_question_one"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:text="@{`Answer: `+viewmodel.observableModel.answerOne}"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            <TextView
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:textStyle="italic"
+                    android:text="What are the colors in the national flag?"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/tv_question_two"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:text="@{`Answer: `+viewmodel.observableModel.answerTwo}"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btn_next"
+                android:text="@string/finish"
+                android:layout_margin="20dp"
+                android:onClick="@{viewmodel.onFinishClicked}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

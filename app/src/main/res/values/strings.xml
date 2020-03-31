@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Trivia App</string>
+    <string name="next">Next</string>
+    <string name="who_is_the_best_cricketer_in_the_world">Who is the best cricketer in the world?</string>
+    <string name="please_select_answer_first">Please select any one of above answers</string>
+    <string name="please_select_answer_second">Please provide answer</string>
+    <string name="model">model</string>
+    <string name="green">Green</string>
+    <string name="orange">Orange</string>
+    <string name="yellow">Yellow</string>
+    <string name="white">White</string>
+    <string name="what_are_the_colors_in_the_indian_national_flag_select_all">What are the colors in the Indian national flag? Select all:</string>
+    <string name="finish">Finish</string>
+    <string name="summary">Summary</string>
+    <string name="history">History</string>
+</resources>
